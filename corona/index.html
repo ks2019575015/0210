@@ -1,0 +1,157 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	<title>jQuery Mobile</title>
+	<script src="cordova.js"></script>
+	<link rel="stylesheet" href="./css/jquery.mobile-1.4.5.min.css"/>
+	<script src="./js/jquery-1.11.1.min.js"></script>
+	<script src="./js/jquery.mobile-1.4.5.min.js"></script>
+<style>
+   li { list-style:none; }
+  .picture { list-style:none; padding:0; margin:0; }
+  .picture li { float:left; width:50%;}
+  .picture li a {display:block; margin:5px; border: 1px }
+  .picture li img { display:block; width:50%;  height:auto;}
+  .picture li img:hover { display:block; width:100%;  height:auto;} 
+</style>
+</head>
+
+<body>
+<div data-theme="b">
+	<div data-role="page" id="home">
+		<div data-role="header" data-theme="b">
+			<h1>CORONA</h1>
+		</div>
+		<div data-role="content" style="text-align:center">
+				<img src="corona1.jpg" width="400">
+			<ul data-role="listview" data-inset="true">
+				<li><a href="#intro">코로나 바이러스란</a></li>
+				<li><a href="#movie" data-rel="dialog">관련뉴스</a></li>
+				<li><a href="#news" data-rel="dialog">예방수칙</a></li>
+				<li><a href="#gallery">확진환자 이동 경로</a></li>
+			</ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>corona</h1>
+		</div>
+	</div>
+	
+	<div data-role="page" id="intro" data-theme="b">
+
+		<div data-role="header" data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>			
+			<h1>코로나 바이러스</h1>
+		</div>
+		<div data-role="content">
+				<div  style="text-align:center">
+					<img src="corona2.jpg" width="400">
+				</div>			
+			<div data-role="collapsible-set" data-theme="b" data-content-theme="e">
+				<div data-role="collapsible">
+					<h3>정의</h3>
+					<p>2019년 12월 발생한 중국 우한 폐렴의 원인 바이러스</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>주요 증상</h3>
+					<p>발열 또는 호흡기 증상(기침, 인후통)</p>
+				</div>
+				<div data-role="collapsible">
+					<h3>위험요인</h3>
+					<p>최근 14일 이내 중국 후베이성 방문</p>
+				</div>
+				<div data-role="collapsible" >
+					<h3>주의사항</h3>
+					<p>중국 방문 시 현지 동물(가금류 포함)과의 접촉을 피하고 전통시장 및 불필요한 의료기관 방문자제. 호흡기 증상자와의 접촉을 피하기</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>corona</h1>
+		</div>		
+	</div>
+	
+	<div data-role="page" id="movie" data-theme="b">
+
+		<div data-role="header" data-position="fixed" data-theme="b">
+
+			<h1>관련 뉴스</h1>
+		</div>
+		<div data-role="content" >
+			<div class="ui-bar ui-bar-e">국내 '신종 코로나' 확진자</div><br/>
+			<li><iframe width="420" height="345" src="https://www.youtube.com/embed/MUK29iHOvcM">
+			</iframe></li><br/>
+
+			<div class="ui-bar ui-bar-e">코로나 바이러스 전문가 의견</div><br/>
+			<li><iframe width="420" height="345" src="https://www.youtube.com/embed/kh8R9Ps3Sic">
+			</iframe></li>
+		
+		<div class="ui-bar ui-bar-e">코로나 바이러스 예방방법</div><br/>
+			<li><iframe width="420" height="345" src="https://www.youtube.com/embed/GXcKt4MA9cs">
+			</iframe></li>
+		</div>
+		<div data-role="footer" data-theme="b">
+		</div>
+	</div>
+	
+	<div data-role="page" id="news">
+		<div data-role="header">
+			<h1>예방방법</h1>
+		</div>
+		<div data-role="content">
+			<h2></h2>
+			<img src="예방수칙.png" alt="Girl in a jacket" width="450" height="700">
+			<!--<img src="3-1.jpg" alt="" width="100%">-->
+		</div>
+		<div data-role="footer">
+			<a href="#home"  data-direction="reverse">이전</a>
+			<a href="#news2" data-rel="dialog" data-transition="slide">다음</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="news2">
+		<div data-role="header">
+			<h1>올바른 마스크 착용 방법</h1>
+		</div>
+		<div data-role="content">
+			<img src="마스크.jpg" alt="Girl in a jacket" width="420" height="700">
+		<div data-role="footer">
+			<a href="#news"  data-direction="reverse">이전</a>
+			<a href="#home">처음</a>
+		</div>
+	</div>
+</div>
+
+	<div data-role="page" id="gallery"  data-theme="b">
+		<div data-role="header" data-position="fixed"  data-theme="b">
+			<a href="#home" data-icon="arrow-l" data-direction="reverse">처음</a>
+			<h1>확진환자 이동 경로</h1>
+		</div>
+		<div data-role="content">
+            <ul class="picture">
+				<li><a href="1.jpg" rel="external"><img src="1.jpg" /></a></li>	
+				<li><a href="2.jpg" rel="external"><img src="2.jpg" /></a></li>	
+				<li><a href="3.jpg" rel="external"><img src="3.jpg" /></a></li>	
+				<li><a href="4.jpg" rel="external"><img src="4.jpg" /></a></li>	
+				<li><a href="5.jpg" rel="external"><img src="5.jpg" /></a></li>	
+				<li><a href="6.jpg" rel="external"><img src="6.jpg" /></a></li>	
+				<li><a href="11.jpg" rel="external"><img src="11.jpg" /></a></li>	
+				<li><a href="13.jpg" rel="external"><img src="13.jpg" /></a></li>	
+				<li><a href="15.jpg" rel="external"><img src="15.jpg" /></a></li>	 
+				<li><a href="16.jpg" rel="external"><img src="16.jpg" /></a></li>    
+				<li><a href="17.jpg" rel="external"><img src="17.jpg" /></a></li>   
+				<li><a href="18.jpg" rel="external"><img src="18.jpg" /></a></li>
+				<li><a href="20.jpg" rel="external"><img src="20.jpg" /></a></li>   
+				<li><a href="21.jpg" rel="external"><img src="21.jpg" /></a></li>  
+				<li><a href="22.jpg" rel="external"><img src="22.jpg" /></a></li>   
+				<li><a href="23.jpg" rel="external"><img src="23.jpg" /></a></li>    
+            </ul>
+		</div>
+		<div data-role="footer" data-position="fixed" data-theme="b">
+			<h1>corona</h1>
+		</div>		
+	</div>
+</div>	
+</body>
+</html>
